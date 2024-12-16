@@ -1,0 +1,182 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container for each section */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* Fade-in animation */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 3s 0.5s forwards; /* Delay fade-in */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    opacity: 0;
+    animation: slideUp 1s 1.5s forwards; /* Slide-up animation */
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: slideUp 1s 2s forwards;
+}
+
+/* About Section */
+#about {
+    background-color: #ffffff; /* White background */
+    padding: 40px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s 2.5s forwards; /* Fade-in animation */
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    animation: slideUp 1s 3.5s forwards;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #555;
+    animation: slideUp 1s 4s forwards;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 40px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s 4.5s forwards;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff7e5f; /* Coral color */
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 2s 5s forwards;
+}
+
+#skills li {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.2rem;
+    color: #555;
+    transition: transform 0.3s ease-in-out;
+}
+
+#skills li:hover {
+    transform: scale(1.1); /* Hover effect */
+    color: #feb47b; /* Light orange color */
+}
+
+/* Projects Section */
+#projects {
+    background-color: #fff; /* White background */
+    padding: 40px 0;
+    opacity: 0;
+    animation: fadeIn 2s 6s forwards;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s 6s forwards;
+}
+
+.project {
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 2s 6.5s forwards;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.project h3:hover {
+    color: #ff7e5f; /* Hover effect */
+}
+
+.project p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Fix Overlapping Footer */
+#about {
+    margin-bottom: 60px; /* Add space below "About Me" */
+}
+
+footer {
+    position: relative; /* Change to relative positioning */
+    margin-top: 40px;   /* Add spacing between content and footer */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
